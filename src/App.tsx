@@ -11,33 +11,13 @@ import Login from "./Login";
 import Register from "./Register";
 import Root from "./Root";
 import ContactUs from "./ContactUs";
-import {AppBar, Button, IconButton, Toolbar, Typography} from "@material-ui/core";
-import MenuIcon from "@material-ui/icons/Menu";
-
-import {useHistory} from 'react-router-dom';
-
+import FRJNavBar from "./FRJNavBar";
 
 function App() {
-    let history = useHistory();
-
-    function handleClick() {
-        history.push("/login");
-    }
-
     return (
         <div>
             <Router>
-                <AppBar position="fixed">
-                    <Toolbar>
-                        <IconButton edge="start" color="inherit" aria-label="menu">
-                            <MenuIcon/>
-                        </IconButton>
-                        <Typography style={{marginLeft: "auto"}} variant="h6">
-                            Home
-                        </Typography>
-                        <Button style={{marginLeft: "auto"}} color="inherit" onClick={handleClick}>Login</Button>
-                    </Toolbar>
-                </AppBar>
+                <FRJNavBar></FRJNavBar>
                 <Switch>
                     <Route path="/about">
                         <About/>
