@@ -15,7 +15,7 @@ import FRJNavBar from "./FRJNavBar";
 
 function App() {
     return (
-        <div>
+        <div id={'homeDiv'}>
             <Router>
                 <FRJNavBar></FRJNavBar>
                 <Switch>
