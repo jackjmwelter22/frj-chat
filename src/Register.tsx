@@ -3,7 +3,9 @@ import NullProps from "./NullProps";
 
 type RegisterState={
     passwordMask:boolean,
-    username:string,
+    email:string,
+    firstName:string,
+    lastName:string,
     password:string,
 }
 
@@ -13,8 +15,10 @@ export default class Register extends React.Component <NullProps,RegisterState> 
         super(props);
         this.state={
             passwordMask:true,
-            username:'',
-            password:'',
+            email:'',
+            firstName:'',
+            lastName:'',
+            password:''
         }
     }
 

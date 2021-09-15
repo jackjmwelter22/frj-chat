@@ -3,7 +3,7 @@ import NullProps from "./NullProps";
 
 type LoginState={
     passwordMask:boolean,
-    username:string,
+    email:string,
     password:string,
 }
 
@@ -13,12 +13,12 @@ export default class Login extends React.Component <NullProps,LoginState>{
         super(props);
         this.state={
             passwordMask:true,
-            username:'',
+            email:'',
             password:''
         }
     }
     handleChangeUsername(value:string) {
-        this.setState({username:value});
+        this.setState({email:value});
     }
     handleChangePassword(value:string) {
         this.setState({password:value});
@@ -29,7 +29,7 @@ export default class Login extends React.Component <NullProps,LoginState>{
         return (
             <div>
                 <p>
-                    <input type="Text" value={this.state.username} onChange={event => this.handleChangeUsername(event.target.value)}></input>
+                    <input type="Text" value={this.state.email} onChange={event => this.handleChangeUsername(event.target.value)}></input>
                     <input type="Text" value={this.state.password} onChange={event => this.handleChangePassword(event.target.value)}></input>
                     <button onClick={() => this.handleClick()}> log in </button>
                 </p>
